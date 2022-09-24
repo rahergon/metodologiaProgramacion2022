@@ -1,0 +1,42 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<!--
+
+		1.- Obtener el volumen de un cilindro de gas, considerando que su diametro es 30 cm y su altura es de 120 cm.
+	-->
+	
+
+	<input type="number" id = "altura" placeholder="ingresa altura" />
+	<input type="number" id = "diametro" placeholder="ingresa diametro" />
+	<button onclick = "calcular()">Calcular</button>
+
+	<p id = "resultado">
+		el volumen es:
+	</p>
+<script>
+
+	function calcular() {
+		const pi = 3.1416;
+		var altura = document.getElementById("altura").value;
+		var diametro = document.getElementById("diametro").value;
+		var radio = diametro/2;
+		const volumen = pi * (radio*radio) *altura;
+
+		document.getElementById("resultado").innerHTML = "El volumen es:" + volumen;
+
+		return ( 0 );
+	}
+	
+	
+</script>	
+</body>
+</html>

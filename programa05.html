@@ -1,0 +1,36 @@
+<!-- 5.-  Convierta pesos a euros. Además de los datos de las monedas, 
+el usuario deberá ingresar su nombre, que en la salida deberá imprimirse. -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Programa 05 pesos a euros.</title>
+</head>
+<body>
+
+
+		<input type="number" name="cambio" id="cambio" placeholder="ingresa el camio al día (euro)" required />
+		<input type="number" name="pesos" id="pesos" placeholder="ingresa cuantos pesos son"  required />
+
+		<button onclick="calcular()">Calcular</button>
+
+		<p id="resultado"></p>
+	
+	<script>
+		function calcular() {
+			
+			const cambio = document.getElementById("cambio").value;
+			const pesos = document.getElementById("pesos").value;
+			
+
+			const euros = pesos/cambio;
+
+			document.getElementById("resultado").innerHTML = "<b>"+euros+"</b>";
+
+		}
+	</script>
+</body>
+</html>

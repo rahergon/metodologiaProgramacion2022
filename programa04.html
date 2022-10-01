@@ -1,0 +1,39 @@
+
+<!-- Calcular el monto de un terreno rectangular. 
+Solicitar el costo del metro cuadrado, Considere lo siguiente: 
+Area=160 metros cuadrados y el lado más pequeño mide 8 metros. -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculo de costo de terreno</title>
+</head>
+<body>
+
+	<input type="number" id="lado1" placeholder="ingresa el primero lado"><br />
+	<input type="number" id="lado2" placeholder="ingresa el segundo lado"><br />
+
+	<input type="number" id="costoMetro" placeholder="ingresa el costo por metro cuadrado"><br />
+
+	<button onclick="calcular()">Calcular</button>
+
+	<p id="resultado"></p>
+	
+	<script>
+		function calcular() {
+
+			const lado1 = document.getElementById("lado1").value;
+			const lado2 = document.getElementById("lado2").value;
+			const costoMetro = document.getElementById("costoMetro").value;
+
+			const costoTotal = costoMetro * (lado1 * lado2);
+
+			document.getElementById("resultado").innerHTML = "<b>"+costoTotal+"</b>";
+		}
+	</script>
+	
+</body>
+</html>

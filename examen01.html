@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Examen 01</title>
+</head>
+<body>
+
+	<!-- nombre de un tiranosaurio, su peso y su longitud -->
+	
+	<input type="text" name="nombre" id="nombre" placeholder="ingresa el nombre del tiranosaurio" />
+	<input type="number" name="peso" id="peso" placeholder="ingresa el peso del tiranosaurio (libras)" />
+	<input type="number" name="longitud" id="longitud" placeholder="ingresa la longitud del tiranosaurio (pies)" />
+	<button onclick="imprimir()" >
+		imprimir
+	</button>
+	<p id="nombreP"></p>
+	<p id="pesoP"></p>
+	<p id="longitudP"></p>
+
+	<script>
+		function imprimir() {
+			let nombre = document.getElementById("nombre").value;
+			let peso = document.getElementById("peso").value;
+			let longitud = document.getElementById("longitud").value;
+
+			const kg = 0.453592;
+			const mts = 0.3047;
+
+			let pesoKg = peso * kg;
+			let longitudMts = longitud * mts;
+
+			document.getElementById("nombreP").innerHTML = "<b>" + nombre +"</b><br><br>"
+			document.getElementById("pesoP").innerHTML = "<b>" + pesoKg + "Kg</b><br><br>";
+			document.getElementById("longitudP").innerHTML = "<b>" + longitudMts + "mts</b><br><br>";
+		}
+	</script>
+</body>
+</html>

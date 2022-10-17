@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calificaciones</title>
+</head>
+<body>
+
+	<p>
+		<input type="number" id="calificacion" placeholder="ingresa calificacion" />
+		<button onclick="calcular()">calcular</button>
+	</p>
+	<p id="resultado">
+		resultado
+	</p>
+	<script>
+		function calcular() {
+			var calificacion = document.getElementById('calificacion').value;
+			if(calificacion>=8) {
+				document.getElementById('resultado').innerHTML="<b>aprobado</b>";
+			}else {
+				document.getElementById('resultado').innerHTML="<b>no aprobado</b>";
+			}
+			
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sueldo nuevo</title>
+  </head>
+  <body>
+    <p>
+      <input id="sueldo" type="number" placeholder="ingresa sueldo" />
+    </p>
+    <p>
+      <input id="categoria" type="number" placeholder="ingresa categoria" />
+    </p>
+    <p>
+      <button onclick="calcular()">Calcular</button>
+    </p>
+    <p id="resultado"></p>
+
+    <script>
+      function calcular() {
+        let sueldo = document.getElementById("sueldo").value;
+        let categoria = Number(document.getElementById("categoria").value);
+        let nuevoSueldo = 0;
+
+        switch (categoria) {
+          case 1:
+            nuevoSueldo = sueldo * 1.15;
+            break;
+          case 2:
+            nuevoSueldo = sueldo * 1.1;
+            break;
+          case 3:
+            nuevoSueldo = sueldo * 1.08;
+            break;
+          case 4:
+            nuevoSueldo = sueldo * 1.07;
+            break;
+          default:
+            alert("seleccionaste una opciòn no valida");
+            break;
+        }
+        document.getElementById("resultado").innerHTML =
+          "<b>" + nuevoSueldo + "</b>";
+      }
+    </script>
+  </body>
+</html>
